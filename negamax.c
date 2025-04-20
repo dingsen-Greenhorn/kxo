@@ -34,7 +34,7 @@ static move_t negamax(char *table, int depth, char player, int alpha, int beta)
     }
     const zobrist_entry_t *entry = zobrist_get(hash_value);
     if (entry)
-        return (move_t){.score = entry->score, .move = entry->move};
+        return (move_t) {.score = entry->score, .move = entry->move};
 
     int score;
     move_t best_move = {-10000, -1};
