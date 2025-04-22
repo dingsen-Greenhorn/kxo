@@ -421,6 +421,7 @@ static int kxo_release(struct inode *inode, struct file *filp)
         fast_buf_clear();
     }
     pr_info("release, current cnt: %d\n", atomic_read(&open_cnt));
+    pr_info("kxo: DRAWBUFFER_SIZE = %d, N_GRIDS = %d\n", DRAWBUFFER_SIZE, N_GRIDS);
     attr_obj.end = 48;
     return 0;
 }
